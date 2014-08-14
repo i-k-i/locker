@@ -1,0 +1,2 @@
+ACTION=="add", SUBSYSTEM=="block", ENV{ID_BUS}=="usb|mmc|memstick|ieee1394", RUN+="/usr/bin/python /locker/usb_monitor.py add %E{ID_SERIAL_SHORT} %E{ID_MODEL} %E{ID_VENDOR}"
+ACTION=="remove", SUBSYSTEM=="block", ENV{ID_BUS}=="usb|mmc|memstick|ieee1394", RUN+="/usr/bin/python /locker/usb_monitor.py remove %E{ID_SERIAL_SHORT} %E{ID_MODEL} %E{ID_VENDOR}"
