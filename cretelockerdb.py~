@@ -1,0 +1,21 @@
+import sqlite3
+
+conn = sqlite3.connect('locker.db')
+
+conn.execute('''CREATE TABLE cells(
+cellid INT PRIMARY KEY NOT NULL,
+lock CHAR,
+port CHAR,
+state BOOL,
+key CHAR,
+path char,
+);
+CREATE TABLE log(
+logid INT PRIMARY KEY NOT NUYLL,
+cell INT,
+action BOOL,
+timestamp FLOAT,
+key CHAR,
+FOREIGN KEY(cell) REFERENCES cells(cellid)
+);''')
+conn.close()
