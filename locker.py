@@ -48,7 +48,7 @@ def dbconnector(devpath, devname, key = ''):
 
     cur = conn.cursor()
 
-    cur.execute('''INSER INTO 
+    cur.execute('''INSER INTO
     ''')
 
 
